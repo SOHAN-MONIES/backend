@@ -90,7 +90,7 @@ exports.deleteBook = async (req, res) => {
   try {
     const book = await Book.deleteOne({ _id: req.params.id });
 
-    res.status(201).json({
+    res.status(204).json({
       status: "Deleted",
       book,
     });
